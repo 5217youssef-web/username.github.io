@@ -10,21 +10,68 @@
 <body>
   <h1>about</h1>
   <p>This is the about page.</p>
-  <p>This is version 1.0.</p>
-  <p>هذا هو الإصدار 1.0.</p>
+  <p>This is version 1.1.0.</p>
+  <p>هذا هو الإصدار 1.1.0.</p>
 </body>
 </html>
  
-              <div>
+      <div>
               <a href="index.html">home</a>
 <a href="plane/plane.html">plane</a>
 <a href="about/about.html">about</a>
 <a href="https://little-programmer.com/little-chat.html">little chat</a>
+<a href="car/car.html">car</a>
 
-        </div>
+        </div>         
 
         
 
-        <div> <a href="">check for updates</a></div>
+
+      
+<button onclick="updateVersion()">Check for Updates</button>
+
+
+
+<script>
+function updateVersion() {
+    // افتح صفحة about وعدل النسخة
+    fetch("about/about.html")
+      .then(response => response.text())
+      .then(data => {
+          // غير النص من 1.0 إلى 1.1
+          let updated = data.replace("1.0", "1.1");
+
+          // احفظ التغيير في localStorage علشان يظهر للمستخدم
+          localStorage.setItem("aboutPage", updated);
+
+          alert("تم التحديث إلى الإصدار 1.1 ✅");
+      });
+}
+</script>
+<body>
+  <div id="aboutContent"></div>
+
+  <script>
+    let saved = localStorage.getItem("aboutPage");
+    if (saved) {
+        document.getElementById("aboutContent").innerHTML = saved;
+    } else {
+        document.getElementById("aboutContent").innerHTML = "<p>الإصدار الحالي: 1.1.0</p>";
+    }
+  </script>
+</body>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
