@@ -1,0 +1,31 @@
+.plane {
+    position: absolute;
+    top: 40%;
+    left: -200px;
+    width: 200px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 30px;
+    animation: fly 10s linear infinite;
+}
+
+/* جناح */
+.plane::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    left: -40px;
+    width: 280px;
+    height: 20px;
+    background-color: #3498db;
+    border-radius: 10px;
+}
+
+/* حركة الطيران */
+@keyframes fly {
+    0% { left: -200px; top: 60%; }
+    50% { left: 100%; top: 30%; }
+    100% { left: -200px; top: 60%; }
+}
+
+

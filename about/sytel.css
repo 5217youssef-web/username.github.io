@@ -1,0 +1,82 @@
+body {
+    background-color: rgb(8, 220, 248);
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    color: #2c3e50;
+}
+
+p {
+    color: #34495e;
+    font-size: 18px;
+}
+
+div {
+    position: fixed;   /* يخلي العنصر ثابت في مكانه */
+    bottom: 0;            /* يثبت عند أعلى الصفحة */
+    left: 0;
+ 
+    width: 100%;       /* يمتد على عرض الصفحة كله */
+    background-color: #1ea5f3; /* لون خلفية خفيف */
+    padding: 10px;
+    text-align: center; /* يخلي الروابط في النص */
+}
+
+/* تنسيق الروابط */
+div a {
+    margin: 0 15px;
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #1abc9c, #3498db);
+    color: #fff;
+    text-align: center;
+}
+div {
+    position: fixed;
+    bottom: 0; /* خلي الروابط تحت */
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    padding: 15px;
+    text-align: center;
+}
+
+div a {
+    margin: 0 20px;
+    text-decoration: none;
+    color: #f1c40f;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+div a:hover {
+    color: #e74c3c;
+}
+.little {
+    font-size: 80px;
+    font-weight: bold;
+    animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+    from { text-shadow: 0 0 10px #fff, 0 0 20px #1abc9c; }
+    to { text-shadow: 0 0 20px #fff, 0 0 40px #e74c3c; }
+}
+p {
+    background: rgba(255,255,255,0.1);
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px auto;
+    width: 60%;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+
+
+
